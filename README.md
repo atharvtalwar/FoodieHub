@@ -16,14 +16,16 @@ FoodieHub is a simple and clean website built using HTML and CSS that showcases 
 
 ## 📁 Project Structure
 
+```
 FoodieHub/
 │── index.html
 │── style.css
 │── images/
+```
 
 ## 🌐 Live Demo
 
-https://atharvtalwar.github.io/FoodieHub/
+👉 https://atharvtalwar.github.io/FoodieHub/
 
 ## 📌 Future Improvements
 
