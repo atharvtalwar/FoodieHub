@@ -23,7 +23,7 @@ FoodieHub/
 
 ## 🌐 Live Demo
 
-(Will be added after deploying on GitHub Pages)
+https://atharvtalwar.github.io/FoodieHub/
 
 ## 📌 Future Improvements
 
