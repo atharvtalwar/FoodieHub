@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodieHub - Easy Indian Home Recipes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">🍛 FoodieHub</div>
+            <ul class="nav-links">
+                <li><a href="#" onclick="showPage('home')">Home</a></li>
+                <li><a href="#" onclick="showPage('recipes')">Recipes</a></li>
+                <li><a href="#" onclick="showPage('tips')">Tips & Tricks</a></li>
+                <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Home Page -->
+        <div id="home" class="page active">
+            <div class="hero">
+                <h1>Welcome to FoodieHub! 🍽️</h1>
+                <p>Discover the authentic taste of Indian home cooking with our easy-to-follow recipes, cooking tips, and kitchen secrets passed down through generations.</p>
+            </div>
+
+            <h2 class="section-title">Featured Dishes</h2>
+            <div class="featured-dishes">
+                <div class="dish-card">
+                    <img src="images/butterchicken.jpg" alt="Butter Chicken" class="dish-image">
+                    <div class="dish-content">
+                        <h3>Butter Chicken</h3>
+                        <p>Creamy, rich, and flavorful chicken curry that's perfect for any occasion. A restaurant favorite made easy at home!</p>
+                    </div>
+                </div>
+                <div class="dish-card">
+                    <img src="images/masaladosa.jpg" alt="Masala Dosa" class="dish-image">
+                    <div class="dish-content">
+                        <h3>Masala Dosa</h3>
+                        <p>Crispy South Indian crepe filled with spiced potato filling. A breakfast classic that everyone loves!</p>
+                    </div>
+                </div>
+                <div class="dish-card">
+                    <img src="images/gulabjamun.jpg" alt="Gulab Jamun" class="dish-image">
+                    <div class="dish-content">
+                        <h3>Gulab Jamun</h3>
+                        <p>Soft, sweet milk dumplings soaked in fragrant sugar syrup. The perfect ending to any Indian meal!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recipes Page -->
+        <div id="recipes" class="page">
+            <div id="recipesList">
+                <h2 class="section-title">Browse Our Recipe Collection</h2>
+                <div class="recipe-categories">
+                    <div class="category-card">
+                        <div class="category-header">🌅</div>
+                        <h3>Breakfast</h3>
+                        <ul class="recipe-list">
+                            <li onclick="showRecipe('masala-dosa')">🥞 Masala Dosa</li>
+                            <li onclick="showRecipe('aloo-paratha')">🍞 Aloo Paratha</li>
+                            <li onclick="showRecipe('poha')">🫓 Poha</li>
+                        </ul>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-header">🌞</div>
+                        <h3>Lunch & Dinner</h3>
+                        <ul class="recipe-list">
+                            <li onclick="showRecipe('butter-chicken')">🍛 Butter Chicken</li>
+                            <li onclick="showRecipe('dal-tadka')">🍲 Dal Tadka</li>
+                            <li onclick="showRecipe('paneer-tikka')">🥗 Paneer Tikka Masala</li>
+                        </ul>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-header">🍨</div>
+                        <h3>Desserts</h3>
+                        <ul class="recipe-list">
+                            <li onclick="showRecipe('gulab-jamun')">🍰 Gulab Jamun</li>
+                            <li onclick="showRecipe('kheer')">🥛 Kheer</li>
+                            <li onclick="showRecipe('gajar-halwa')">🧁 Gajar Ka Halwa</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recipe Details -->
+            <div id="recipeDetail" class="recipe-detail"></div>
+        </div>
+
+        <!-- Tips & Tricks Page -->
+        <div id="tips" class="page">
+            <h2 class="section-title">Cooking Tips & Kitchen Hacks</h2>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <h3>🌶️ Perfect Spice Balance</h3>
+                    <p>Always add spices in stages. Toast whole spices first to release their oils, then add ground spices towards the end of cooking to preserve their flavor and aroma.</p>
+                </div>
+                <div class="tip-card">
+                    <h3>🍚 Fluffy Rice Every Time</h3>
+                    <p>Rinse rice 2-3 times until water runs clear. Use a 1:2 ratio (rice:water) and let it rest covered for 5 minutes after cooking before fluffing with a fork.</p>
+                </div>
+                <div class="tip-card">
+                    <h3>🧅 No-Tears Onion Cutting</h3>
+                    <p>Chill onions in the fridge for 30 minutes before cutting, or cut them near running water. This reduces the release of irritating compounds.</p>
+                </div>
+                <div class="tip-card">
+                    <h3>🥬 Keep Greens Fresh</h3>
+                    <p>Store leafy vegetables wrapped in newspaper inside the fridge. The newspaper absorbs excess moisture and keeps them fresh for up to a week.</p>
+                </div>
+                <div class="tip-card">
+                    <h3>🥛 Prevent Milk From Boiling Over</h3>
+                    <p>Place a wooden spoon across the pot while boiling milk. It breaks the surface tension and prevents overflow.</p>
+                </div>
+                <div class="tip-card">
+                    <h3>🍋 Healthy Cooking Swaps</h3>
+                    <p>Replace heavy cream with Greek yogurt, use olive oil instead of ghee for everyday cooking, and add grated vegetables to increase nutrition in curries.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Page -->
+        <div id="contact" class="page">
+            <h2 class="section-title">Share Your Recipe With Us!</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 2rem;">Have a family recipe you'd love to share? We'd love to hear from you!</p>
+            
+            <div class="contact-form">
+                <div class="success-message" id="successMessage">
+                    ✓ Thank you! Your recipe has been submitted successfully. We'll review it soon!
+                </div>
+                <form onsubmit="handleSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Your Name *</label>
+                        <input type="text" id="name" required placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" required placeholder="your.email@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="recipeName">Recipe Name *</label>
+                        <input type="text" id="recipeName" required placeholder="E.g., Mom's Special Biryani">
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Category *</label>
+                        <select id="category" required>
+                            <option value="">Select a category</option>
+                            <option value="breakfast">Breakfast</option>
+                            <option value="lunch">Lunch & Dinner</option>
+                            <option value="dessert">Dessert</option>
+                            <option value="snack">Snacks</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="recipe">Recipe Details *</label>
+                        <textarea id="recipe" required placeholder="Share your recipe with ingredients and step-by-step instructions..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit Recipe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 FoodieHub - Bringing Indian Home Cooking to Your Kitchen</p>
+        <p>Made with ❤️ and lots of spices!</p>
+    </footer>
+
+    <script>
+        const recipes = {
+            'butter-chicken': {
+                name: 'Butter Chicken',
+                image: 'images/butterchicken.jpg',
+                prepTime: '20 mins',
+                cookTime: '30 mins',
+                servings: '4',
+                ingredients: [
+                    '500g boneless chicken, cut into pieces',
+                    '1 cup yogurt',
+                    '2 tbsp butter',
+                    '1 cup tomato puree',
+                    '1/2 cup cream',
+                    '2 tbsp ginger-garlic paste',
+                    '1 tsp red chili powder',
+                    '1 tsp garam masala',
+                    '1 tsp kasuri methi (dried fenugreek)',
+                    'Salt to taste',
+                    '2 tbsp oil'
+                ],
+                instructions: [
+                    'Marinate chicken with yogurt, 1 tbsp ginger-garlic paste, and salt for 30 minutes.',
+                    'Heat oil in a pan and cook marinated chicken until golden. Set aside.',
+                    'In the same pan, melt butter and add remaining ginger-garlic paste.',
+                    'Add tomato puree, red chili powder, and salt. Cook for 10 minutes.',
+                    'Add the cooked chicken and garam masala. Mix well.',
+                    'Pour in cream and kasuri methi. Simmer for 5 minutes.',
+                    'Garnish with cream and serve hot with naan or rice.'
+                ]
+            },
+            'masala-dosa': {
+                name: 'Masala Dosa',
+                image: 'images/masaladosa.jpg',
+                prepTime: '8 hours (fermentation)',
+                cookTime: '30 mins',
+                servings: '6',
+                ingredients: [
+                    '2 cups rice',
+                    '1/2 cup urad dal',
+                    '1/4 tsp fenugreek seeds',
+                    '4 large potatoes, boiled',
+                    '2 onions, chopped',
+                    '2 green chilies, chopped',
+                    '1 tsp mustard seeds',
+                    '1 tsp turmeric powder',
+                    'Curry leaves',
+                    'Salt to taste',
+                    'Oil for cooking'
+                ],
+                instructions: [
+                    'Soak rice, urad dal, and fenugreek seeds separately for 6-8 hours.',
+                    'Grind into smooth batter, mix together, and ferment overnight.',
+                    'For filling: Heat oil, add mustard seeds, curry leaves, onions, and green chilies.',
+                    'Add turmeric, mashed potatoes, and salt. Mix well.',
+                    'Heat a dosa pan, pour a ladle of batter and spread in circular motion.',
+                    'Drizzle oil around edges, cook until golden and crispy.',
+                    'Place potato filling in center, fold dosa, and serve hot with chutney and sambar.'
+                ]
+            },
+            'gulab-jamun': {
+                name: 'Gulab Jamun',
+                image: 'images/gulabjamun.jpg',
+                prepTime: '15 mins',
+                cookTime: '25 mins',
+                servings: '20 pieces',
+                ingredients: [
+                    '1 cup milk powder',
+                    '1/4 cup all-purpose flour',
+                    '1/4 tsp baking soda',
+                    '2 tbsp ghee',
+                    '4-5 tbsp milk',
+                    '2 cups sugar',
+                    '2 cups water',
+                    '4-5 cardamom pods',
+                    'Few saffron strands',
+                    'Ghee for deep frying'
+                ],
+                instructions: [
+                    'Mix milk powder, flour, baking soda, and ghee. Add milk gradually to form soft dough.',
+                    'Make small smooth balls from the dough (no cracks).',
+                    'For syrup: Boil sugar and water until slightly sticky. Add cardamom and saffron.',
+                    'Heat ghee on low-medium heat. Fry gulab jamuns until golden brown.',
+                    'Immediately transfer hot gulab jamuns to warm sugar syrup.',
+                    'Let them soak for at least 2 hours before serving.',
+                    'Serve warm or at room temperature.'
+                ]
+            },
+            'dal-tadka': {
+                name: 'Dal Tadka',
+                image: 'images/daltadka.jpg',
+                prepTime: '10 mins',
+                cookTime: '30 mins',
+                servings: '4',
+                ingredients: [
+                    '1 cup toor dal (split pigeon peas)',
+                    '1 onion, chopped',
+                    '2 tomatoes, chopped',
+                    '2 green chilies',
+                    '1 tsp cumin seeds',
+                    '1 tsp turmeric powder',
+                    '1 tsp red chili powder',
+                    '2 tbsp ghee',
+                    'Curry leaves',
+                    '4 garlic cloves, chopped',
+                    'Salt to taste',
+                    'Coriander leaves for garnish'
+                ],
+                instructions: [
+                    'Pressure cook dal with turmeric and salt for 3-4 whistles until soft.',
+                    'Mash the dal lightly and keep aside.',
+                    'Heat ghee in a pan, add cumin seeds and let them splutter.',
+                    'Add chopped garlic, green chilies, and curry leaves.',
+                    'Add onions and sauté until golden brown.',
+                    'Add tomatoes, red chili powder, and cook until soft.',
+                    'Pour this tadka over the cooked dal, mix well.',
+                    'Garnish with coriander leaves and serve hot with rice or roti.'
+                ]
+            },
+            'aloo-paratha': {
+                name: 'Aloo Paratha',
+                image: 'images/alooparatha.jpg',
+                prepTime: '15 mins',
+                cookTime: '20 mins',
+                servings: '6',
+                ingredients: [
+                    '2 cups wheat flour',
+                    '4 potatoes, boiled and mashed',
+                    '1 onion, finely chopped',
+                    '2 green chilies, chopped',
+                    '1 tsp cumin seeds',
+                    '1 tsp red chili powder',
+                    '1 tsp garam masala',
+                    '1/2 tsp amchur (dry mango powder)',
+                    'Fresh coriander, chopped',
+                    'Salt to taste',
+                    'Ghee or butter for cooking'
+                ],
+                instructions: [
+                    'Mix wheat flour with water and salt to make soft dough. Rest for 15 minutes.',
+                    'For filling: Mix mashed potatoes with all spices, onions, chilies, and coriander.',
+                    'Divide dough into balls. Roll out into small circles.',
+                    'Place potato filling in center, seal edges and roll gently into flat paratha.',
+                    'Heat tawa/griddle, place paratha and cook on medium heat.',
+                    'Apply ghee on both sides and cook until golden brown spots appear.',
+                    'Serve hot with yogurt, pickle, and butter.'
+                ]
+            },
+            'poha': {
+                name: 'Poha',
+                image: 'images/poha.jpg',
+                prepTime: '10 mins',
+                cookTime: '15 mins',
+                servings: '4',
+                ingredients: [
+                    '2 cups poha (flattened rice)',
+                    '1 onion, chopped',
+                    '2 potatoes, diced small',
+                    '1/2 cup peanuts',
+                    '2 green chilies, chopped',
+                    '1 tsp mustard seeds',
+                    '1 tsp turmeric powder',
+                    '8-10 curry leaves',
+                    '2 tbsp oil',
+                    'Salt to taste',
+                    'Lemon juice',
+                    'Fresh coriander and sev for garnish'
+                ],
+                instructions: [
+                    'Rinse poha in water gently and drain. Let it rest for 5 minutes.',
+                    'Heat oil, add mustard seeds, curry leaves, and peanuts. Fry until golden.',
+                    'Add potatoes and cook until soft.',
+                    'Add onions and green chilies, sauté until translucent.',
+                    'Add turmeric powder and salt, mix well.',
+                    'Add the soaked poha and mix gently.',
+                    'Cook for 2-3 minutes. Add lemon juice.',
+                    'Garnish with coriander and sev. Serve hot.'
+                ]
+            },
+            'paneer-tikka': {
+                name: 'Paneer Tikka Masala',
+                image: 'images/paneertikkamasala.jpg',
+                prepTime: '30 mins',
+                cookTime: '25 mins',
+                servings: '4',
+                ingredients: [
+                    '400g paneer, cubed',
+                    '1 cup yogurt',
+                    '2 tbsp ginger-garlic paste',
+                    '1 tsp red chili powder',
+                    '1 tsp garam masala',
+                    '1/2 tsp turmeric',
+                    '2 cups tomato puree',
+                    '1/2 cup cream',
+                    '1 capsicum, cubed',
+                    '1 onion, cubed',
+                    'Salt to taste',
+                    '2 tbsp butter',
+                    'Kasuri methi'
+                ],
+                instructions: [
+                    'Marinate paneer, capsicum, and onion with yogurt and half the spices for 30 mins.',
+                    'Grill or pan-fry the marinated paneer and vegetables until charred.',
+                    'Heat butter in a pan, add ginger-garlic paste.',
+                    'Add tomato puree, remaining spices, and salt. Cook for 10 minutes.',
+                    'Add cream and kasuri methi, mix well.',
+                    'Add the grilled paneer and vegetables to the gravy.',
+                    'Simmer for 5 minutes and serve hot with naan or rice.'
+                ]
+            },
+            'kheer': {
+                name: 'Kheer',
+                image: 'images/kheer.jpg',
+                prepTime: '10 mins',
+                cookTime: '40 mins',
+                servings: '6',
+                ingredients: [
+                    '1/2 cup basmati rice',
+                    '1 liter full-fat milk',
+                    '1/2 cup sugar',
+                    '4-5 cardamom pods, crushed',
+                    '10-12 almonds, sliced',
+                    '10-12 cashews, chopped',
+                    '2 tbsp raisins',
+                    'Few saffron strands',
+                    '1 tbsp ghee'
+                ],
+                instructions: [
+                    'Wash and soak rice for 20 minutes. Drain well.',
+                    'Boil milk in a heavy-bottomed pan, add rice.',
+                    'Cook on low heat, stirring frequently until rice is soft and milk thickens (30-35 mins).',
+                    'Add sugar and cardamom, mix well and cook for 5 more minutes.',
+                    'In a small pan, heat ghee and fry nuts until golden.',
+                    'Add fried nuts and saffron to kheer.',
+                    'Serve warm or chilled, garnished with more nuts.'
+                ]
+            },
+            'gajar-halwa': {
+                name: 'Gajar Ka Halwa',
+                image: 'images/gajarkahalwa.jpg',
+                prepTime: '15 mins',
+                cookTime: '45 mins',
+                servings: '6',
+                ingredients: [
+                    '1 kg carrots, grated',
+                    '1 liter full-fat milk',
+                    '3/4 cup sugar',
+                    '4-5 cardamom pods, crushed',
+                    '1/4 cup ghee',
+                    '10-12 cashews, chopped',
+                    '10-12 almonds, sliced',
+                    '2 tbsp raisins',
+                    '1/4 tsp nutmeg powder'
+                ],
+                instructions: [
+                    'Heat 2 tbsp ghee in a heavy pan, add grated carrots.',
+                    'Sauté for 5 minutes on medium heat.',
+                    'Add milk and cook on low-medium heat, stirring occasionally.',
+                    'Cook until milk is absorbed and carrots are soft (25-30 minutes).',
+                    'Add sugar and cardamom, cook until sugar dissolves.',
+                    'Keep stirring and cooking until the mixture thickens and starts leaving the sides.',
+                    'Heat remaining ghee, fry nuts until golden.',
+                    'Add fried nuts to halwa, mix well. Serve warm with vanilla ice cream.'
+                ]
+            }
+        };
+
+        function showPage(pageName) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById(pageName).classList.add('active');
+            
+            // Reset recipe view when navigating away
+            if (pageName === 'recipes') {
+                document.getElementById('recipesList').style.display = 'block';
+                document.getElementById('recipeDetail').classList.remove('active');
+            }
+            
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function showRecipe(recipeId) {
+            const recipe = recipes[recipeId];
+            if (!recipe) return;
+
+            const recipeDetail = document.getElementById('recipeDetail');
+            const recipesList = document.getElementById('recipesList');
+
+            recipeDetail.innerHTML = `
+                <button class="back-btn" onclick="backToRecipeList()">← Back to Recipes</button>
+                <h2>${recipe.name}</h2>
+                <img src="${recipe.image}" alt="${recipe.name}">
+                <div class="recipe-meta">
+                    <div class="meta-item">⏱️ Prep: ${recipe.prepTime}</div>
+                    <div class="meta-item">🔥 Cook: ${recipe.cookTime}</div>
+                    <div class="meta-item">🍽️ Servings: ${recipe.servings}</div>
+                </div>
+                <div class="recipe-section">
+                    <h3>Ingredients</h3>
+                    <ul>
+                        ${recipe.ingredients.map(ing => `<li>${ing}</li>`).join('')}
+                    </ul>
+                </div>
+                <div class="recipe-section">
+                    <h3>Instructions</h3>
+                    <ol>
+                        ${recipe.instructions.map(inst => `<li>${inst}</li>`).join('')}
+                    </ol>
+                </div>
+            `;
+
+            recipesList.style.display = 'none';
+            recipeDetail.classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function backToRecipeList() {
+            document.getElementById('recipesList').style.display = 'block';
+            document.getElementById('recipeDetail').classList.remove('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            const successMessage = document.getElementById('successMessage');
+            successMessage.style.display = 'block';
+            event.target.reset();
+            
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
