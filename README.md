@@ -27,6 +27,12 @@ FoodieHub/
 
 👉 https://atharvtalwar.github.io/FoodieHub/
 
+## 📸 Preview
+
+<p align="center">
+  <img src="images/preview.png" alt="FoodieHub Preview" width="800">
+</p>
+
 ## 📌 Future Improvements
 
 * Add responsiveness (mobile support)
